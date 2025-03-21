@@ -1,2 +1,3 @@
 # Ignore the .vscode folder (VS Code settings)
 .vscode/
+bin/
