@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${workspaceFolder}/*.cpp", // ${file}
                 //"global.cpp", // added here to run together
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
