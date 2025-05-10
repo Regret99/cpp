@@ -49,3 +49,39 @@ void printInColor(string text, string textColor, bool newLine) {
     cout << code + text + "\033[0m"; // reset
 
 }
+
+int int_to_string(const std::string& string_in)
+{
+    try {
+        return std::stoi(string_in);  // Converts string to int
+    } catch (...) {
+        return -1; // Return -1 if conversion fails
+    }
+}
+
+
+int int_option(int max_digit)
+{
+    string prompt = "Enter a value between 1 and " + to_string(max_digit) + ": ";
+    printInColor(prompt, "blue", false);
+
+    if (cin.peek() == '\n')
+        cin.ignore();
+
+    bool valid_in = false;
+    string stringIn = "-1";
+    int answer;
+    while (!valid_in) {
+        getline(cin, stringIn);
+        if (stringIn.length() == 1) {
+            answer = int_to_string(stringIn);
+        }
+        if (answer > 0 & answer <= max_digit) {
+            valid_in = true;
+        } else {
+            printInColor("Invalid option. Try again...", "red");
+            printInColor(prompt, "blue", false);
+        }
+    }
+    return answer;
+}
