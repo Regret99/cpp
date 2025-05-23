@@ -6,5 +6,7 @@
 
 void greet(std::string name);
 void foyerChoice();
+void groundFloor();
+void studyRoom(std::string text = "");
 
 #endif
