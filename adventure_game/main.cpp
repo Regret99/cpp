@@ -47,7 +47,7 @@ class World {
             cout << endl;
             printInColor("Welcome to The Bones Manor!!!!","cyan");
             printInColor("This is the World of Bones Manor","cyan");
-            printInColor("Many exciting encouters Await!!","cyan");
+            printInColor("Many exciting encounters Await!!","cyan");
             printInColor("There are many rooms and lore there for you to Explore!!!","cyan");
             cout << endl;
             string preText= "You arrive at the manor in the morning.\n"
@@ -72,6 +72,7 @@ void start() {
 }
 int main () {
 
+    system("clear");
     bool quit = false;
     string charPos = "Foyer";
     World gameWorld;
@@ -92,18 +93,12 @@ int main () {
     // printInColor("Hello there","white",true);
     // printInColor("Hello there","",true);
 
-    while(true) {
-
-        printInColor("You are in the - ","blue",false);
-        printInColor(charPos,"green");
-        printInColor("Choose a action","blue");
-        cout << "1. Look Around" << endl;
-        cin >> action;
-        foyerChoice();
-
-
-    }
-
+    printInColor("You are in the - ","blue",false);
+    printInColor(charPos,"green");
+    printInColor("Choose a action","blue");
+    cout << "1. Look Around" << endl;
+    cin >> action;
+    foyerChoice();
 
     cout << endl;
     return 0;
