@@ -1,9 +1,24 @@
 
+## Linux ------------------
 in bin commands
 
 mkdir -p bin
 g++ main.cpp room_dec.cpp story_item.cpp utils.cpp -o bin/adventure
 ./bin/adventure
+
+------------------------
+
+## Windows ----------------
+
+Command to compile and create exe
+
+mkdir -p bin
+cl.exe main.cpp room_dec.cpp utils.cpp story_item.cpp /EHsc /Zi /Fe:bin/adventure.exe
+
+run
+./bin/adventure.exe
+
+------------------------
 
 ## temporary text
 Creating a text adventure game in C++ can be a fun and rewarding project. Here’s a step-by-step guide along with resources to help you get started:

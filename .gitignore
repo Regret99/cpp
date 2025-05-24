@@ -2,3 +2,9 @@
 # .vscode/
 bin/
 adventure_game/bin
+.vs/
+adventure_game/main.obj
+adventure_game/room_dec.obj
+adventure_game/story_item.obj
+adventure_game/utils.obj
+adventure_game/vc140.pdb
