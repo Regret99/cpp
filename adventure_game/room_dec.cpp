@@ -61,6 +61,7 @@ void groundFloor() {
         "Check Study",
         "Check Washroom",
         "Checkout Kitchen",
+        "Go to Main Hall",
     };
 
     int choice = groundFloor->run();
@@ -69,9 +70,11 @@ void groundFloor() {
     if (choice == 1) {
         studyRoom();
     } else if (choice == 2) {
-        printInColor("\nYou tried all doors but they all are locked\n");
+        washroom();
     } else if (choice == 3) {
-        printInColor("\nyou starved to death", "red");
+        kitchen();
+    }else if (choice == 4) {
+        mainHall();
     }
 }
 
@@ -108,4 +111,55 @@ void studyRoom(std::string text) {
     }else if (choice == 4) {
         groundFloor();
     }
+}
+
+void washroom() {
+    StoryItem* washRoom = new StoryItem;
+
+    washRoom->preText = "\nYou enter the Washroom and ";
+
+    washRoom->preTextColour = "magenta";
+
+    washRoom->options = {
+        "Look Around",
+        "Go Back to Ground Floor corridor",
+    };
+
+    int choice = washRoom->run();
+
+    if (choice == 1) {
+        printInColor("\nYou looked around and didn't find anything of use currently.\n");
+        washroom();
+    } else if (choice == 2) {
+        printInColor("\nYou turned back.\n");
+        groundFloor();
+    }
+}
+void kitchen() {
+    StoryItem* kitchenItem = new StoryItem;
+
+    kitchenItem->preText = "\nYou enter the Kitchen and ";
+
+    kitchenItem->preTextColour = "magenta";
+
+    kitchenItem->options = {
+        "Look Around",
+        "Return Back to Ground Floor corridor",
+    };
+
+    int choice = kitchenItem->run();
+
+    if (choice == 1) {
+        printInColor("\nYou looked around and saw multiple kitchen utensils and a dinning table.\n");
+        kitchen();
+    } else if (choice == 2) {
+        printInColor("\nYou turned back.\n");
+        groundFloor();
+    }
+}
+void basement() {
+
+}
+void mainHall() {
+
 }
