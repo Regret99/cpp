@@ -5,6 +5,8 @@
 #include <chrono>
 #include <vector>
 #include <map>
+#include <termios.h>
+#include <unistd.h>
 #include "utils.h"
 
 using namespace std;
@@ -84,4 +86,16 @@ int int_option(int max_digit)
         }
     }
     return answer;
+}
+
+void waitForKeyPress() {
+    termios oldt, newt;
+    tcgetattr(STDIN_FILENO, &oldt);           // save old settings
+    newt = oldt;
+    newt.c_lflag &= ~(ICANON | ECHO);         // disable buffering and echo
+    tcsetattr(STDIN_FILENO, TCSANOW, &newt);  // apply new settings
+
+    getchar(); // wait for any key press
+
+    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);  // restore old settings
 }
