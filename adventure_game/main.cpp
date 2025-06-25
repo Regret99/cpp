@@ -50,6 +50,11 @@ class World {
             printInColor("Many exciting encounters Await!!","cyan");
             printInColor("There are many rooms and lore there for you to Explore!!!","cyan");
             cout << endl;
+            printInColor("Ready To Play?","green",true);
+            cout << endl;
+            printInColor("Press Any Key to continue","white",true);
+            cout << endl;
+            waitForKeyPress();
             string preText= "You arrive at the manor in the morning.\n"
                             "since you have summer vacation going on you are going to be spending that time here in the Bones Manor.\n"
                             "You ring the door bell after waiting a while you here a 'come in' and you enter the manor,\n"
