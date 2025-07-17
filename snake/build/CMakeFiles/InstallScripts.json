@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/var/www/html/cpp/cpp/snake/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

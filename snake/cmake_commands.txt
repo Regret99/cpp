@@ -1,0 +1,7 @@
+You can use following commands to build make and run files using cmake.
+
+cd /var/www/html/cpp/cpp/snake
+mkdir build && cd build
+cmake ..
+make
+./snake

@@ -1,0 +1,3 @@
+/var/www/html/cpp/cpp/snake/build/CMakeFiles/snake.dir
+/var/www/html/cpp/cpp/snake/build/CMakeFiles/edit_cache.dir
+/var/www/html/cpp/cpp/snake/build/CMakeFiles/rebuild_cache.dir
