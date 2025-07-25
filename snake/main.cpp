@@ -33,18 +33,24 @@ int main() {
 
     printInColor("Press Any Key to continue","white",true);
     cout << endl;
-waitForKeyPress();
+    waitForKeyPress();
 
-    drawBox();
+    // drawBox();
+    waitForUserInput();
 
     int count = 0;
-    while(true) {
-        cout<<" ";
-        if(count > 50){
-            break;
-        }
-        count++;
-    }
+    // while(true) {
+    //
+    //     if(count > 50){
+    //         break;
+    //     }else {
+    //         // cout << "\033[2J\033[1;1H"; // Clears screen and moves cursor to top-left
+    //         system("clear");
+    //     }
+    //     drawBox();
+    //     waitForUserInput():
+    //     count++;
+    // }
 
     return 0;
 }
